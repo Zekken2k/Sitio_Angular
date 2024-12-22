@@ -1,0 +1,19 @@
+<div class="comentarios-container">
+  <h2>Comentarios</h2>
+  <form (ngSubmit)="agregarComentario()">
+    <textarea
+      [(ngModel)]="nuevoComentario"
+      name="comentario"
+      placeholder="Escribe tu comentario aquí..."
+      required
+    ></textarea>
+    <button type="submit">Añadir Comentario</button>
+  </form>
+
+  <div class="comentarios-lista">
+    <h3>Lista de Comentarios</h3>
+    <div *ngFor="let comentario of comentarios" class="comentario">
+      {{ comentario }}
+    </div>
+  </div>
+</div>
